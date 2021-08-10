@@ -1,0 +1,249 @@
+:root {
+  --main-color: #FFA822;
+  --sub-color: #134E6F;
+  --point-color: #FF6150;
+  --container-color: #F7EDDC;
+  --font-color: #1b1b1b;
+  --sub-font-color: #f0f0f0;
+  --btn-color: white;
+  --error-color: #d44141;
+  --success-color: #8bd685;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+.eBtn {
+  border-radius: 10px;
+  background-color: var(--point-color);
+  margin-right: 15px;
+  border: none;
+  color: var(--sub-font-color);
+  padding: 1% 2%;
+  font-size: 1.2em;
+}
+
+.errorDiv {
+  width: 100%;
+  background-color: var(--error-color);
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.errorMessage {
+  color: var(--sub-font-color);
+}
+
+.messageDiv {
+  width: 100%;
+  background-color: var(--success-color);
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.message {
+  color: var(--sub-font-color);
+  font-size: 1.3em;
+}
+
+.eBtn:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+/* event.js (components) */
+
+.dataContainer {
+  background-color: var(--container-color);
+  border-radius: 30px;
+  margin: 4% 0 10% 0;
+  padding: 2% 5%;
+}
+
+.imgEvent {
+  display: grid;
+  grid-template-areas: 
+    "title title title"
+    "image discr discr"
+    "image discr discr";
+}
+
+.eventTitle {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 2%;
+  margin-bottom: 9%;
+  grid-area: title;
+}
+
+.noImgP {
+  margin-bottom: 10%;
+}
+
+.withImgP {
+  padding: 0 5%;
+}
+
+.eventImages {
+  grid-area: image;
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.eventDisc {
+  display: block;
+  grid-area: discr;
+  padding: 0 5%;
+}
+
+.eventBtns {
+  height: 30%;
+  grid-area: btn;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.viewDetailBtn {
+  display: none;
+  border: none;
+  text-decoration: underline;
+  background-color: var(--container-color);
+}
+
+.saveBtn {
+  background-color: var(--sub-color);
+}
+
+.updateForm {
+  margin-top: 3%;
+  border: 0.8px solid lightgray;
+  padding: 3%;
+  border-radius: 10px;
+}
+
+.formTitle {
+  margin-bottom: 5%;
+}
+
+.cancelBtn {
+  background-color: var(--sub-color);
+}
+
+/* events.js */
+.eventTitle {
+  margin-top: 3%;
+}
+
+#eventCardB {
+  margin: 0 10%;
+}
+
+#addForm {
+  padding: 3% 5%;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  margin: 5% 15%;
+  color: var(--sub-font-color);
+}
+
+#uploadBtn {
+  margin-top: 5%;
+  width: 200px;
+  height: 50px;
+  font-size: 1.6em;
+}
+
+#uploadBtn:hover {
+  background-color: var(--sub-color);
+}
+
+/* savedEvents.js */
+#savedEventDiv {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  padding: 0 5%;
+}
+
+.eventDiv {
+  padding: 2% 4%;
+  margin-bottom: 3%;
+  background-color: var(--container-color);
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  p {
+    font-size: 1.7em;
+  }
+
+  /* event.js */
+  .dataContainer {
+    padding: 7%;
+  }
+
+  .noImgEvent {
+    padding: 0 10%;
+  }
+
+  .imgEvent {
+    grid-template-areas: 
+      "title"
+      "image"
+      "discr";
+    justify-items: center;
+  }
+
+  .withImgP {
+    display: none;
+    margin-top: 8%;
+    padding: 0 10%;
+  }
+
+  .withImgP.show {
+    display: block;
+  }
+
+  .eventImages {
+    width: 300px;
+  }
+
+  .eventDisc {
+    display: none;
+  }
+
+  #addForm {
+    padding: 3% 5%;
+  }
+
+  .subTitle {
+    font-size: 2em;
+  }
+
+  .labelName {
+    font-size: 1.3em;
+  }
+
+  .eventBtns {
+    display: block;
+    text-align: center;
+  }
+
+  .eBtn {
+    width: 65%;
+    margin-bottom: 2%;
+    font-size: 2em;
+  }
+
+  .viewDetailBtn {
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 1%;
+    margin-left: 20%;
+  }
+
+}
